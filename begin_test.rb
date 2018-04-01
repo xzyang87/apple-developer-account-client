@@ -1,6 +1,10 @@
 require './check_certificates'
 require './check_provisioning_profiles'
 
+if RUBY_VERSION < "2.3.3"
+  raise "Ruby Version too low"
+end
+
 # Get all the teams
 teams = AppleDevClient.teams
 

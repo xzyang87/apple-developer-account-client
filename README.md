@@ -4,6 +4,14 @@ This tool is based on [Spaceship of fastlane](https://github.com/fastlane/fastla
 
 What **Apple Developer Account Client** do is to monitor all the expiring and expired certificates and provising profiles in all teams of an Apple developer account.
 
+Requirements: (**ruby version >= 2.3.3**)
+
+```ruby
+# check Ruby version first
+$ ruby -v
+ruby 2.3.3p222 (2016-11-21 revision 56859) [universal.x86_64-darwin17]
+```
+
 
 ## When should we use this tool?
 
@@ -19,24 +27,26 @@ Thanks to [Spaceship of fastlane](https://github.com/fastlane/fastlane/tree/mast
 
 ## Installation
 
-**First**, you need to install fastlane, please refer to [here](https://docs.fastlane.tools/getting-started/ios/setup/)
+1. **First**, you need to install fastlane, please refer to [here](https://docs.fastlane.tools/getting-started/ios/setup/)
 
-**Secondly**, you need to fill in your apple developer account name and passwod in [consts.rb](https://github.com/xzyang87/apple-developer-account-client/blob/master/consts.rb)
+2. **Secondly**, you need to fill in your apple developer account name and passwod in [consts.rb](https://github.com/xzyang87/apple-developer-account-client/blob/master/consts.rb)
 
-```ruby
-class Consts
-    ACCOUNT_NAME = "fill in your apple developer account name"
-    ACCOUNT_PASSWORD = "fill in the password"
-end
+	```ruby
+	# change the value of ACCOUNT_NAME and ACCOUNT_PASSWORD
+	class Consts
+	    ACCOUNT_NAME = "fill in your apple developer account name"
+	    ACCOUNT_PASSWORD = "fill in the password"
+	end
+	
+	```
 
-```
+3. **Finally** paste the following command in your terminal:
 
-**Finally** paste the following command in your terminal:
-
-```ruby
-ruby begin_test.rb
-
-```
+	```ruby
+	# run this tool
+	ruby begin_test.rb
+	
+	```
 That's all you have to do, press Enter, and all the expiring and expried certificates and provisionging profiles will have no where to excape! If you wish, you could use this tool on your CI machine, and run it once a week or even once a day.
 
 
