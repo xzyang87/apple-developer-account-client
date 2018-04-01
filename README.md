@@ -2,9 +2,11 @@
 
 This tool is based on [Spaceship of fastlane](https://github.com/fastlane/fastlane/tree/master/spaceship). 
 
-It is inspired when working with a complicated Apple Developer Account, which has multiple teams, a large amount of appIds, certificates, provisioning profiles, etc. 
+What **Apple Developer Account Client** do is to monitor all the expiring and expired certificates and provising profiles in all teams of an Apple developer account.
+
 
 ## When should we use this tool?
+
 
 If you are managing a complex Apple Developer Account like the above, you'll soon find a lot of problems, like creating new appIds and corresponding certificates and provisioning profiles several times a week. Among those problems, there is one dangerous and hard to manage: **EXPIRATION of certificates and provisioning profiles.**
 
@@ -14,7 +16,6 @@ To prevent this from happening, you either make an excel to record all sorts of 
 
 Thanks to [Spaceship of fastlane](https://github.com/fastlane/fastlane/tree/master/spaceship), it has done all the dirty work of categorizing and modeling of APIs of Apple Developer Center, we don't need to do the web scraping work anymore.
 
-What **Apple Developer Account Client** do is to use this powerful "spaceship" to monitor all the certificates and provising profiles in all teams of an Apple developer account. It lists those are about to expire in 2 months, and also expired ones, for you to deal with an already messy account.
 
 ## Installation
 
