@@ -1,0 +1,28 @@
+#!/bin/sh
+
+clear && printf '\e[3J'
+
+red=`tput setaf 1`
+green=`tput setaf 2`
+yellow=`tput setaf 3`
+blue=`tput setaf 4`
+magenta=`tput setaf 5`
+cyan=`tput setaf 6`
+white=`tput setaf 7`
+
+reset=`tput sgr0`
+
+bold=`tput bold`
+
+# install xcode-select
+echo "-------------------------- ${yellow}installing the latest version of the Xcode command line tools${reset} --------------------------"
+xcode-select --install
+
+# install fastlane
+echo "-------------------------- ${yellow}installing the latest version of fastlane${reset} --------------------------"
+echo "this may require you to enter root user password......"
+sudo gem install fastlane -NV
+
+clear && printf '\e[3J'
+
+ruby ./welcome.rb
